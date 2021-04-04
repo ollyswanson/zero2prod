@@ -27,7 +27,7 @@ jobs:
           override: true
       - name: Migrate database
         run: |
-          sudo apt-get install libq-dev -y
+          sudo apt-get install libpq-dev -y
           cargo install --version=0.5.1 sqlx-cli --no-default-features --features postgres
           SKIP_DOCKER=true ./scripts/init_db.sh
       - uses: actions-rs/cargo@v1
@@ -70,7 +70,7 @@ jobs:
           components: clippy
       - name: Migrate database
         run: |
-          sudo apt-get install libq-dev -y
+          sudo apt-get install libpq-dev -y
           cargo install --version=0.5.1 sqlx-cli --no-default-features --features postgres
           SKIP_DOCKER=true ./scripts/init_db.sh
       - uses: actions-rs/clippy-check@v1
@@ -102,7 +102,7 @@ jobs:
 
       - name: Migrate database
         run: |
-          sudo apt-get install libq-dev -y
+          sudo apt-get install libpq-dev -y
           cargo install --version=0.5.1 sqlx-cli --no-default-features --features postgres
           SKIP_DOCKER=true ./scripts/init_db.sh
       - name: Run cargo-tarpaulin
