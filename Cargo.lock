@@ -152,9 +152,9 @@ dependencies = [
 
 [[package]]
 name = "actix-web"
-version = "4.0.0-beta.4"
+version = "4.0.0-beta.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1d95e50c9e32e8456220b5804867de76e97a86ab8c38b51c9edcccc0f0fddca7"
+checksum = "6de19cc341c2e68b1ee126de171e86b610b5bbcecc660d1250ebed73e0257bd6"
 dependencies = [
  "actix-codec",
  "actix-http",
@@ -166,22 +166,23 @@ dependencies = [
  "actix-utils",
  "actix-web-codegen",
  "ahash 0.7.2",
- "awc",
  "bytes",
  "derive_more",
  "either",
  "encoding_rs",
  "futures-core",
  "futures-util",
+ "language-tags",
  "log",
  "mime",
+ "once_cell",
  "pin-project",
  "regex",
  "serde 1.0.125",
  "serde_json",
  "serde_urlencoded",
  "smallvec",
- "socket2 0.3.19",
+ "socket2",
  "time 0.2.26",
  "url",
 ]
@@ -269,31 +270,6 @@ name = "autocfg"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cdb031dd78e28731d87d56cc8ffef4a8f36ca26c38fe2de700543e627f8a464a"
-
-[[package]]
-name = "awc"
-version = "3.0.0-beta.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "737c2a61028f4079f954a585b7580b52406e3c679f11f2a2aa0d7f6547d9a58a"
-dependencies = [
- "actix-codec",
- "actix-http",
- "actix-rt",
- "actix-service",
- "base64",
- "bytes",
- "derive_more",
- "futures-core",
- "itoa",
- "log",
- "mime",
- "percent-encoding",
- "pin-project-lite",
- "rand 0.8.3",
- "serde 1.0.125",
- "serde_json",
- "serde_urlencoded",
-]
 
 [[package]]
 name = "base-x"
@@ -885,7 +861,7 @@ dependencies = [
  "httpdate",
  "itoa",
  "pin-project",
- "socket2 0.4.0",
+ "socket2",
  "tokio",
  "tower-service",
  "tracing",
@@ -1745,17 +1721,6 @@ name = "smallvec"
 version = "1.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fe0f37c9e8f3c5a4a66ad655a93c74daac4ad00c441533bf5c6e7990bb42604e"
-
-[[package]]
-name = "socket2"
-version = "0.3.19"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "122e570113d28d773067fab24266b66753f6ea915758651696b6e35e49f88d6e"
-dependencies = [
- "cfg-if",
- "libc",
- "winapi",
-]
 
 [[package]]
 name = "socket2"
